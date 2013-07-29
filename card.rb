@@ -1,7 +1,7 @@
 #defines a Card class
 
 class Card
-    attr_accessor :suit, :number
+    attr_accessor :suit, :number, :value
     attr_reader :type
 
     def initialize(suit,number)
@@ -20,7 +20,21 @@ class Card
             else
                 @type = @number
         end
+
+        #added by David and Lee
+        case @suit
+            when "Spades"
+              @value = @number + 400
+            when "Hearts"
+              @value = @number + 300
+            when "Diamonds"
+              @value = @number + 200
+            when "Clubs"
+              @value = @number + 100
+        end
     end
+
+
 
     def to_s
         puts "Your card is the #{@type} of #{@suit}"
