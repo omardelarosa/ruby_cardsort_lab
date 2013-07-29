@@ -1,3 +1,19 @@
+def bubble_sort(deck)
+    #mike s's bubble sort
+    
+  for i in (0..(deck.length-2))
+    # for j in (0..(deck.length-i-2))
+      (deck.length-i-1).times do |j|
+      if deck[j].card_value > deck[j + 1].card_value
+        deck[j], deck[j + 1] = deck[j + 1], deck[j]
+      end
+    end
+  end
+  deck
+end
+
+# -------- merge sort -----
+
 def merge_sort(array)
 
     #base case: 
